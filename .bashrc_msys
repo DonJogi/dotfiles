@@ -1,0 +1,27 @@
+export TZ=CET-1CEST-2,M3.5.0/02:00:00,M10.5.0/03:00:00
+
+if [ -f ~/git-completion.bash ]; then
+  . ~/git-completion.bash
+fi
+
+if [ -f ~/gradle-tab-completion.bash ]; then
+  . ~/gradle-tab-completion.bash
+fi
+
+#GIT_PROMPT_THEME=Solarized
+#GIT_PROMPT_ONLY_IN_REPO=1
+#GIT_PS1_SHOWSTASHSTATE=1
+#GIT_PS1_SHOWDIRTYSTATE=1
+#GIT_PS1_SHOWUNTRACKEDFILES=1
+#GIT_PS1_DESCRIBE_STYLE=default
+GIT_PS1_SHOWCOLORHINTS=1
+#GIT_PS1_SHOWUPSTREAM="auto"
+
+# Prompt
+if [ "$HOSTNAME" == "Jogi7" ]; then
+    PS1='\[\033[0;32m\]$(pwd) ~\[\033[1;36m\]\n\t$ '
+else
+    PS1='\[\033[0;32m\]$(pwd) ~\[\033[1;36m\]\n\t \[\u\]@\[\h\]$ '
+fi
+
+bind '"\t":menu-complete'
