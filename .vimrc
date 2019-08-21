@@ -13,6 +13,11 @@ let g:pathogen_disabled = []
 call add(g:pathogen_disabled, '')
 execute pathogen#infect()
 
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
 let mapleader = "\<Space>"
 map <C-c> "+y<CR> 
 
