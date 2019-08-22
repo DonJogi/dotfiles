@@ -10,6 +10,7 @@
 .node-gyp
 .npm
 .nuget
+.m2
 .mozilla
 .omnisharp
 .PlayOnLinux
