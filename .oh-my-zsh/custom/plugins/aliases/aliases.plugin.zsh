@@ -3,6 +3,8 @@ alias ppj="vs | python -m json.tool | tee /dev/tty | cs"
 alias hibernate="systemctl hibernate"
 
 # git
+alias gconf='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
 alias gbvv="git branch -vv"
 alias gbvva="git branch -vva"
 alias gpod="git push origin --delete"
