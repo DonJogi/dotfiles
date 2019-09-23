@@ -18,6 +18,17 @@ execute pathogen#infect()
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
+Plug '/usr/sbin/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'mbbill/undotree'
+Plug 'vim-syntastic/syntastic'
+Plug 'easymotion/vim-easymotion'
+
+call plug#end()
+
 let mapleader = "\<Space>"
 map <C-c> "+y<CR> 
 
@@ -123,8 +134,6 @@ nnoremap [<space>  :<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[
 nnoremap ]<space>  :<c-u>put =repeat(nr2char(10), v:count1)<cr>
 
 " fzf.vim
-Plug '/usr/sbin/fzf'
-Plug 'junegunn/fzf.vim'
 
 nnoremap <Leader>f :GFiles<CR>
 nnoremap <Leader>F :Files<CR>

@@ -16,6 +16,7 @@
 .PlayOnLinux
 .ssh
 .steam
+.vim/plugged
 .vscode
 .vscode-oss
 .yarn
