@@ -27,6 +27,7 @@ Plug 'mbbill/undotree'
 Plug 'vim-syntastic/syntastic'
 Plug 'easymotion/vim-easymotion'
 Plug 'lervag/vimtex'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
