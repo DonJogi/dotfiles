@@ -26,6 +26,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'mbbill/undotree'
 Plug 'vim-syntastic/syntastic'
 Plug 'easymotion/vim-easymotion'
+Plug 'lervag/vimtex'
 
 call plug#end()
 
