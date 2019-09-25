@@ -84,3 +84,4 @@ export LANG=en_US.UTF-8
 # Variables
 # export MANPATH="/usr/local/man:$MANPATH"
 
+export FZF_DEFAULT_COMMAND='rg --files --hidden'
