@@ -98,3 +98,9 @@ export LANGUAGE=en_US.UTF-8
 
 export FZF_BASE=$(which fzf)
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
+
+# Host specific 
+HOSTNAME=$(hostname)
+if [[ $HOSTNAME =~ "24500" ]]; then
+	source /etc/profile.d/apps-bin-path.sh
+fi
