@@ -1,4 +1,4 @@
-export EDITOR="nvim"
+export EDITOR="vim"
 export VISUAL="$EDITOR"
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
@@ -15,4 +15,5 @@ if [ $HOSTNAME = "jogi5" ]; then
 fi
 
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
+export PATH="$PATH:$ANDROID_HOME/emulator"
 

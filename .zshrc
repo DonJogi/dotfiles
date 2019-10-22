@@ -1,3 +1,4 @@
+#zmodload zsh/zprof
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
@@ -8,7 +9,9 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+antigen theme agnoster
 antigen apply
+
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -42,7 +45,7 @@ DISABLE_AUTO_UPDATE="true"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -61,7 +64,8 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(aliases fzf git git-extras gradle pip python screen yarn dircycle autojump sudo zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git git-extras gradle jump pip python screen dircycle) 
+
 # For zsh-completions:
 autoload -U compinit && compinit
 
@@ -96,11 +100,12 @@ export LANGUAGE=en_US.UTF-8
 # Variables
 # export MANPATH="/usr/local/man:$MANPATH"
 
-export FZF_BASE=$(which fzf)
-export FZF_DEFAULT_COMMAND='rg --files --hidden'
-
-# Host specific 
+# Host specific
 HOSTNAME=$(hostname)
 if [[ $HOSTNAME =~ "24500" ]]; then
 	source /etc/profile.d/apps-bin-path.sh
 fi
+
+unsetopt share_history
+
+#zprof
