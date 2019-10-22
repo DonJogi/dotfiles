@@ -36,6 +36,7 @@ Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'tpope/vim-fugitive'
 
+Plug 'doums/darcula'
 call plug#end()
 
 let mapleader = "\<Space>"
@@ -47,7 +48,7 @@ if has('gui_running')
 		endif
 		
 		if has('gui_gtk3')
-				set guifont=Jetbrains\ Mono
+				set guifont=Jetbrains\ Mono\ NL
 				source $VIMRUNTIME/mswin.vim
 				behave mswin
 				set guioptions-=T  " Remove toolbar
