@@ -18,7 +18,8 @@ alias gbd='git branch -d'
 alias gbD='git branch -D'
 alias gbm='git branch -m'
 alias grbd='git rebase develop'
-alias glrd='gitFetchPullRebaseOnDevelop'
+alias glrd='gitFetchPullRebaseOn develop'
+alias glrm='gitFetchPullRebaseOn master'
 alias glt="git log --pretty=format:'%C(yellow)%h %Cred%cd %Cblue%an%Cgreen%d %Creset%s' --date=local --topo-order --color=always"
 alias gltg="glt --graph"
 alias glts="glt --show-signature"
@@ -26,13 +27,13 @@ alias gd="git diff --word-diff"
 alias gcod="gco develop"
 alias gcom="gco master"
 
-gitFetchPullRebaseOnDevelop() {
-	git checkout develop
+gitFetchPullRebaseOn() {
+	git checkout $1
 	git fetch --prune
 	git pull
-	git checkout - 
-	git rebase develop
-}
+	git checkout -
+	git rebase $1
+}	
 
 # Delete .orig files
 alias trashorig="gst | grep -E '.+\..+\.orig' | xargs trash"
