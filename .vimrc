@@ -39,13 +39,17 @@ if has('gui_running')
 		if has('gui_macvim')
 				set guifont=Monaco:h12
 		endif
-
+		
 		if has('gui_gtk3')
 				set guifont=Jetbrains\ Mono
 				source $VIMRUNTIME/mswin.vim
 				behave mswin
 				set guioptions-=T  " Remove toolbar
-				set lines=40 columns=163
+		endif
+
+		if has('gui_gtk2')
+				source $VIMRUNTIME/mswin.vim
+				behave mswin
 		endif
 
 		" set background=light
@@ -54,6 +58,7 @@ if has('gui_running')
 		colorscheme summerfruit256
 		let g:airline_theme="papercolor"
 		set guicursor+=n-v-c:blinkon0
+		set lines=55 columns=180
 endif
 
 " NERDTree
