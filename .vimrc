@@ -23,6 +23,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'mbbill/undotree'
 Plug 'vim-syntastic/syntastic'
 Plug 'easymotion/vim-easymotion'
@@ -40,15 +41,18 @@ if has('gui_running')
 		endif
 
 		if has('gui_gtk3')
-				set guifont=SourceCodePro
+				set guifont=Jetbrains\ Mono
 				source $VIMRUNTIME/mswin.vim
 				behave mswin
 				set guioptions-=T  " Remove toolbar
 				set lines=40 columns=163
 		endif
 
+		" set background=light
 		set background=dark
-		colorscheme candid
+		" colorscheme candid
+		colorscheme summerfruit256
+		let g:airline_theme="papercolor"
 		set guicursor+=n-v-c:blinkon0
 endif
 
