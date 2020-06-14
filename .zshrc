@@ -61,7 +61,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras aliases gradle pip python screen yarn dircycle autojump sudo zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(aliases fzf git git-extras gradle pip python screen yarn dircycle autojump sudo zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
 # For zsh-completions:
 autoload -U compinit && compinit
 
@@ -96,4 +96,5 @@ export LANGUAGE=en_US.UTF-8
 # Variables
 # export MANPATH="/usr/local/man:$MANPATH"
 
+export FZF_BASE=$(which fzf)
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
