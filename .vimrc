@@ -8,6 +8,9 @@ set showcmd
 set nostartofline
 set hidden
 set autochdir
+" Always use the system clipboard for yanking and pasting
+set clipboard=unnamedplus
+
 
 let g:pathogen_disabled = []
 call add(g:pathogen_disabled, '')
@@ -29,6 +32,10 @@ Plug 'vim-syntastic/syntastic'
 Plug 'easymotion/vim-easymotion'
 Plug 'lervag/vimtex'
 Plug 'tpope/vim-surround'
+
+Plug 'junegunn/vim-easy-align'
+Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'dhruvasagar/vim-table-mode'
 
 call plug#end()
 
@@ -89,6 +96,9 @@ set langmenu=en_US
 let $LANG = 'en_US'
 set tabstop=4
 
+" git commit messages
+au FileType gitcommit setlocal tw=72
+
 " Enable folding
 set foldmethod=indent
 set foldlevel=99
@@ -145,7 +155,6 @@ nnoremap [<space>  :<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[
 nnoremap ]<space>  :<c-u>put =repeat(nr2char(10), v:count1)<cr>
 
 " fzf.vim
-
 nnoremap <Leader>f :GFiles<CR>
 nnoremap <Leader>F :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
@@ -153,3 +162,16 @@ nnoremap <Leader>h :History<CR>
 nnoremap <Leader>l :BLines<CR>
 nnoremap <Leader>L :Lines<CR>
 nnoremap <Leader>' :Marks<CR>
+
+" EasyAlign
+au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+" vim-table-mode
+let g:table_mode_corner='|'
+
