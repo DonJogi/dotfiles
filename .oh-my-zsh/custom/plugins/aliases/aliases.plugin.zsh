@@ -26,6 +26,11 @@ alias glts="glt --show-signature"
 alias gd="git diff --word-diff"
 alias gcod="gco develop"
 alias gcom="gco master"
+alias gtymb="gitDifftoolMergebase"
+
+gitDifftoolMergebase() {
+	gty $(git merge-base HEAD master)...
+}
 
 gitFetchPullRebaseOn() {
 	git checkout $1
