@@ -51,7 +51,8 @@ if has('gui_running')
 		" set background=light
 		set background=dark
 		" colorscheme candid
-		colorscheme summerfruit256
+		" colorscheme summerfruit256
+		colorscheme dark_plus
 		let g:airline_theme="papercolor"
 		set guicursor+=n-v-c:blinkon0
 endif
