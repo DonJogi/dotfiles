@@ -8,6 +8,9 @@ set showcmd
 set nostartofline
 set hidden
 set autochdir
+" Always use the system clipboard for yanking and pasting
+set clipboard=unnamedplus
+
 
 let g:pathogen_disabled = []
 call add(g:pathogen_disabled, '')
@@ -30,6 +33,10 @@ Plug 'easymotion/vim-easymotion'
 Plug 'lervag/vimtex'
 Plug 'tpope/vim-surround'
 
+Plug 'junegunn/vim-easy-align'
+Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'dhruvasagar/vim-table-mode'
+
 call plug#end()
 
 let mapleader = "\<Space>"
@@ -39,13 +46,17 @@ if has('gui_running')
 		if has('gui_macvim')
 				set guifont=Monaco:h12
 		endif
-
+		
 		if has('gui_gtk3')
 				set guifont=Jetbrains\ Mono
 				source $VIMRUNTIME/mswin.vim
 				behave mswin
 				set guioptions-=T  " Remove toolbar
-				set lines=40 columns=163
+		endif
+
+		if has('gui_gtk2')
+				source $VIMRUNTIME/mswin.vim
+				behave mswin
 		endif
 
 		" set background=light
@@ -55,6 +66,7 @@ if has('gui_running')
 		colorscheme dark_plus
 		let g:airline_theme="papercolor"
 		set guicursor+=n-v-c:blinkon0
+		set lines=55 columns=180
 endif
 
 " NERDTree
@@ -84,6 +96,9 @@ set linebreak
 set langmenu=en_US
 let $LANG = 'en_US'
 set tabstop=4
+
+" git commit messages
+au FileType gitcommit setlocal tw=72
 
 " Enable folding
 set foldmethod=indent
@@ -141,7 +156,6 @@ nnoremap [<space>  :<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[
 nnoremap ]<space>  :<c-u>put =repeat(nr2char(10), v:count1)<cr>
 
 " fzf.vim
-
 nnoremap <Leader>f :GFiles<CR>
 nnoremap <Leader>F :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
@@ -149,3 +163,16 @@ nnoremap <Leader>h :History<CR>
 nnoremap <Leader>l :BLines<CR>
 nnoremap <Leader>L :Lines<CR>
 nnoremap <Leader>' :Marks<CR>
+
+" EasyAlign
+au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+" vim-table-mode
+let g:table_mode_corner='|'
+
