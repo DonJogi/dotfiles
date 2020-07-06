@@ -50,6 +50,9 @@ alias gwo='./gradlew --offline'
 # ADB
 alias adl="adb devices -l"
 
+# VIM
+alias gvimr="gvim --remote"
+
 # Platform specific 
 UNAME=$(uname)
 if [ $UNAME = "Darwin" ]; then
