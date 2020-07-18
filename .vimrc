@@ -10,7 +10,7 @@ set hidden
 set autochdir
 " Always use the system clipboard for yanking and pasting
 set clipboard=unnamedplus
-
+set shiftwidth=4
 
 let g:pathogen_disabled = []
 call add(g:pathogen_disabled, '')
@@ -71,7 +71,7 @@ endif
 
 " NERDTree
 " map <C-n> :NERDTreeTabsToggle<CR>
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif " Quit if nerdtree is  the only window left
 nnoremap <leader>q :bp<cr>:bd #<cr>
 nnoremap <F4> :NERDTreeToggle<cr>
 nnoremap ,n :NERDTreeFind<cr>
