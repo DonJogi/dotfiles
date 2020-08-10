@@ -36,6 +36,7 @@ Plug 'tpope/vim-surround'
 Plug 'junegunn/vim-easy-align'
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -63,7 +64,8 @@ if has('gui_running')
 		set background=dark
 		" colorscheme candid
 		" colorscheme summerfruit256
-		colorscheme dark_plus
+		" colorscheme dark_plus
+		colorscheme darcula
 		let g:airline_theme="papercolor"
 		set guicursor+=n-v-c:blinkon0
 		set lines=55 columns=180
@@ -87,6 +89,8 @@ set scrolloff=5		" keep 3 lines when scrolling
 set ruler			" show the cursor position all the time
 set number			" show line numbers
 set ignorecase		" ignore case when searching
+set infercase		
+set wildignorecase  " for case insensitive auto completion
 set ttyfast     	" smoother changes
 set autoindent		" always set autoindenting on
 set smartindent		" smart indent
