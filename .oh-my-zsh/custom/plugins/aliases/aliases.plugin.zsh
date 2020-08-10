@@ -28,6 +28,12 @@ alias gcod="gco develop"
 alias gcom="gco master"
 alias gtymb="gitDifftoolMergebase"
 
+# grep
+alias exclgrep="grep -ri --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.build,.intermediates}"
+alias xmlgrep="grep -ri --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.build,.intermediates} --include \"*.xml\""
+alias javagrep="grep -ri --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.build,.intermediates} --include \"*.java\""
+alias ktgrep="grep -ri --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.build,.intermediates} --include \"*.kt\""
+
 gitDifftoolMergebase() {
 	gty $(git merge-base HEAD master)...
 }
