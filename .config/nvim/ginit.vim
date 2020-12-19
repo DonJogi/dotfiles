@@ -1,7 +1,7 @@
 Guifont! Jetbrains Mono:h10
 
 set background=light
-colorscheme dark_plus
+colorscheme darcula
 let g:airline_theme="papercolor"
 
 source $VIMRUNTIME/mswin.vim

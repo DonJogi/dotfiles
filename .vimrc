@@ -21,8 +21,6 @@ execute pathogen#infect()
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-Plug '/usr/sbin/fzf'
-Plug 'junegunn/fzf.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
@@ -158,15 +156,6 @@ nnoremap ]e  :<c-u>execute 'move +'. v:count1<cr>
 " Quickly add empty lines
 nnoremap [<space>  :<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[
 nnoremap ]<space>  :<c-u>put =repeat(nr2char(10), v:count1)<cr>
-
-" fzf.vim
-nnoremap <Leader>f :GFiles<CR>
-nnoremap <Leader>F :Files<CR>
-nnoremap <Leader>b :Buffers<CR>
-nnoremap <Leader>h :History<CR>
-nnoremap <Leader>l :BLines<CR>
-nnoremap <Leader>L :Lines<CR>
-nnoremap <Leader>' :Marks<CR>
 
 " EasyAlign
 au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
