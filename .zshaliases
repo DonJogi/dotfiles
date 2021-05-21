@@ -1,6 +1,7 @@
 # General
 alias ppj="vs | python -m json.tool | tee /dev/tty | cs"
 alias hibernate="systemctl hibernate"
+alias j="jump"
 
 # git
 alias gconf='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
