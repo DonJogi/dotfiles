@@ -1,3 +1,12 @@
+# Start configuration added by Zim install {{{
+#
+# User configuration sourced by all invocations of the shell
+#
+
+# Define Zim location
+: ${ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim}
+# }}} End configuration added by Zim install
+
 export EDITOR="vim"
 export VISUAL="$EDITOR"
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
@@ -23,5 +32,7 @@ if [ $HOSTNAME = "jogi5" ]; then
 fi
 
 source $HOME/.zshaliases
+#source $HOME/.oh-my-zsh/plugins/git/git.plugin.zsh
+source $HOME/.gitalias
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
 
