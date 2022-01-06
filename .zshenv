@@ -13,6 +13,7 @@ if [ $HOSTNAME = "jogi5" ]; then
 	#export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
 	#export JAVA_HOME="/home/jogi/Apps/android-studio-canary/jre"
 	export JAVA_HOME="/var/lib/flatpak/app/com.google.AndroidStudio/current/active/files/extra/android-studio/jre"
+	export PATH="$JAVA_HOME/bin:$PATH"
 	export PATH="$PATH:$HOME/.local/bin"
 	export PATH="$PATH:$HOME/Scripts"
 	export PATH="$PATH:$ANDROID_SDK_ROOT/platform-tools"
