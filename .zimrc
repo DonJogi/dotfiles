@@ -41,3 +41,6 @@ zmodule zsh-users/zsh-history-substring-search
 
 # Theme
 zmodule eriner
+
+# Custom Modules
+zmodule https://github.com/ohmyzsh/ohmyzsh --source plugins/jump/jump.plugin.zsh
